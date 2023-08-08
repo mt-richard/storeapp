@@ -1,5 +1,7 @@
+import Ads from "../components/ads";
 import Category from "../components/category";
 import Product from "../components/product";
+import Review from "../components/review";
 
 const Home = () => {
     return ( 
@@ -81,39 +83,90 @@ const Home = () => {
             </div>
 
             {/* get Discount */}
-            <div className="relative z-1 bg-gray-200 py-10 lg:px-20 xl:px-60">
-                <div className="absolute flex justify-center bg-white w-full top-0 left-0 py-3 ">
-                    <div className="absolute  absolute top-0">
-                        <img src="./images/basil-leaf.png" alt="" className="w-36"/>
-                    </div>
-                </div>
-                
-                <div className="flex justify-center ">
-                    <div className="md:flex xl:gap-10 w-full px-5 pb-5 pt-20">
-                        <Category title={"Farm Fresh Fruits"} desc={"Ut sollicitudin quam vel purus tempus, vel eleifend felis varius."} image={"./images/lemon-1.jpg"}/>
-                        <Category title={"Fresh Vegetables"} desc={"Aliquam porta justo nibh, id laoreet sapien sodales vitae justo."} image={'./images/cabbage.jpeg'}/>
-                        <Category title={"Orhanic Legume"} desc={"Phasellus sed urna mattis, viverra libero sed, aliquam est."} image={'./images/legume.jpeg'}/>
-                    </div>
-                </div>
-
-                
-            </div>
-            <div className="w-full bg-test py-10 md:flex justify-between md:px-10 lg:px-40 xl:px-60">
-                    <div className="flex  justify-center mb-4 md:mb-0">
-                        <h3 className="text-2xl md:text-4xl text-white font-black">Get 25% Off On Your First Purchase!</h3>
-                    </div>
-                    <div className="flex justify-center">
-                        <button className="bg-primary px-10 py-3 uppercase text-white rounded flex gap-5" type="button"><img src="./icons/icons8-cart-64.png" alt="icon" className="w-5"></img> Shop Now</button>
+            <div>
+                <div className="relative z-1 bg-gray-200 py-10 lg:px-20 xl:px-60">
+                    <div className="absolute flex justify-center bg-white w-full top-0 left-0 py-3 ">
+                        <div className="absolute  absolute top-0">
+                            <img src="./images/basil-leaf.png" alt="" className="w-36"/>
+                        </div>
                     </div>
                     
+                    <div className="flex justify-center ">
+                        <div className="md:flex xl:gap-10 w-full px-5 pb-5 pt-20">
+                            <Category title={"Farm Fresh Fruits"} desc={"Ut sollicitudin quam vel purus tempus, vel eleifend felis varius."} image={"./images/lemon-1.jpg"}/>
+                            <Category title={"Fresh Vegetables"} desc={"Aliquam porta justo nibh, id laoreet sapien sodales vitae justo."} image={'./images/cabbage.jpeg'}/>
+                            <Category title={"Orhanic Legume"} desc={"Phasellus sed urna mattis, viverra libero sed, aliquam est."} image={'./images/legume.jpeg'}/>
+                        </div>
+                    </div>
+
+                    </div>
+                
+                    <div className="w-full bg-test py-10 md:flex justify-between md:px-10 lg:px-40 xl:px-60">
+                            <div className="flex  justify-center mb-4 md:mb-0">
+                                <h3 className="text-2xl md:text-4xl text-white font-black">Get 25% Off On Your First Purchase!</h3>
+                            </div>
+                            <div className="flex justify-center">
+                                <button className="bg-primary px-10 py-3 uppercase text-white rounded flex gap-5" type="button"><img src="./icons/icons8-cart-64.png" alt="icon" className="w-5"></img> Shop Now</button>
+                            </div>
+                    </div>
+                    <div className="flex justify-center py-10 bg-gray-200" >
+                        <h2 className="text-2xl font-bold">Try It For Free. No Registration Needed.</h2>
+                    </div> 
+            </div>
+
+            {/* Trending Products */}
+
+            <div className="items-center py-10 px-10 md:px-5 lg:px-10 xl:px-60 bg-white">
+                <div className="flex justify-center ">
+                         <h2 className="font-black text-4xl">Trending products</h2>
                 </div>
-                <div className="bg-white flex justify-center py-10">
-                    <h2 className="text-2xl font-bold">Try It For Free. No Registration Needed.</h2>
+                <div className="flex justify-center py-10">
+                    <img src="./images/logo-leaf-new.png" alt="" />
+                </div>
+                <div className="products md:flex md:gap-5 lg:gap-7 xl:gap-10">
+                    <Product image={"./images/coffee-asorted-300x300.jpg"} category={"Groceries"} title={"Assorted Coffee"} price={"£35.00"}/>
+                    <Product image={"./images/sanitizer-300x300.jpg"} category={"Groceries"} title={"Hand Sanitizer"} price={"£14.00"}/>
+                    <Product image={"./images/red-chillies-300x300.jpg"} category={"Groceries"} title={"Handpicked Red Chillies"} price={"£19.00"}/>
+                    <Product image={"./images/edible-oil-300x300.jpg"} category={"Groceries"} title={"Natural Extracted Edible Oil"} price={"£25.00"} open={true}/>
 
                 </div>
+            </div>
 
+            {/* customer feedbacks */}
+
+            <div className="items-center py-10 px-10 md:px-5 lg:px-10 xl:px-60 flex justify-center flex-col bg-white">
+                <div className="flex justify-center ">
+                         <h2 className="font-black text-4xl">Customers Reviews</h2>
+                </div>
+                <div className="flex justify-center py-10">
+                    <img src="./images/logo-leaf-new.png" alt="" />
+                </div>
+                <div className="products md:flex md:gap-5 lg:gap-7 xl:gap-10 md:pt-10 justify-center">
+                    <div className="md:w-1/4 md:pt-24">
+                        <Review />
+                    </div>
+                    <Ads />
+                    <div className="md:w-1/4 md:pt-24">
+                        <Review />
+                    </div>
+                </div>
+
+                <div className="md:flex justify-center items-center py-10">
+                    <div className="flex justify-center ">
+                        <h2 className="text-2xl font-bold px-5">Featured Brands :</h2>
+                    </div>
+                    <div className="grid md:grid-cols-5 grid-cols-3 gap-3 pt-10 md:pt-0">
+                        <img src="./images/logo-1.svg" alt="" />
+                        <img src="./images/logo-2.svg" alt="" />
+                        <img src="./images/logo-3.svg" alt="" />
+                        <img src="./images/logo-4.svg" alt="" />
+                        <img src="./images/logo-5.svg" alt="" />
+                    </div>
+                </div>
+            </div>
         </div>
      );
 }
  
 export default Home;
+
