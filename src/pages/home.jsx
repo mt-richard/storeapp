@@ -141,12 +141,12 @@ const Home = () => {
                 <div className="flex justify-center py-10">
                     <img src="./images/logo-leaf-new.png" alt="" />
                 </div>
-                <div className="products md:flex md:gap-5 lg:gap-7 xl:gap-10 md:pt-10 justify-center">
-                    <div className="md:w-1/4 md:pt-24">
+                <div className="products w-full grid md:grid-cols-2 xl:grid-cols-3 md:gap-5 lg:gap-7 xl:gap-10 md:pt-10 justify-center">
+                    <div className="md:w-full md:pt-24">
                         <Review />
                     </div>
                     <Ads />
-                    <div className="md:w-1/4 md:pt-24">
+                    <div className="md:w-full md:pt-24">
                         <Review />
                     </div>
                 </div>

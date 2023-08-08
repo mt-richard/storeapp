@@ -4,7 +4,7 @@ const Footer = () => {
             <div className="bottom-0 bg-secondary md:flex justify-center py-16 px-10 md:px-20 lg:px-40 xl:px-60 gap-10 border-b border-gray">
                 <div className="md:w-1/2">
                     <img src="./images/organic-store-white-logo.png" alt="logo" />
-                    <p className="text-gray-300 leading-8 text-left font-light py-10">
+                    <p className="text-gray-300 leading-10 text-[19px] text-left italic font-semibold py-10 ">
                     Maecenas mi justo, interdum at consectetur vel, tristique et arcu. Ut quis eros blandit, ultrices diam in, elementum ex. Suspendisse quis faucibus urna. Suspendisse pellentesque.
                     </p>
                 </div>
